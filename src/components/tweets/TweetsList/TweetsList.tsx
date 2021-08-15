@@ -1,4 +1,5 @@
 import React from 'react';
+import TweetItem from '../TweetItem/TweetItem';
 
 import s from './TweetsList.module.scss';
 
@@ -7,13 +8,10 @@ interface TweetsListProps {}
 const TweetsList = (props: TweetsListProps): JSX.Element => {
   return (
     <div>
-      <div className={s.itemContainer}>
-        <div className={s.info}>
-          <span className={s.username}>{`username@userid`}</span>
-          <span>・</span>
-          <time className={s.time}>{`date 2021`}</time>
-        </div>
-        <p className={s.content}>Tweets Content</p>
+      <div className={s.tweetList}>
+        {[...Array(10)].map(tweet => (
+          <TweetItem />
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,35 @@
+.itemContainer {
+  position: relative;
+  background-color: var(--color-muted);
+  padding: 16px;
+
+  &:hover {
+    transition: box-shadow 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.36);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+
+    .username {
+      display: inline-block;
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    span {
+      color: var(--color-text);
+    }
+
+    .time {
+      display: inline-block;
+      color: var(--color-text);
+      font-weight: 400;
+      opacity: 0.65;
+    }
+  }
+
+  .content {
+  }
+}
